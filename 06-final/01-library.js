@@ -27,3 +27,36 @@ const books = [
 ];
 
 // your code here
+
+let availableCount = 0;
+let before2000Count = 0;
+let newestBook = books[0];
+
+  // Print every book info and calculate stats
+for (let i = 0; i < books.length; i++) {
+    const book = books[i];
+    
+    // Determine status text based on availability
+    let status = book.available ? "available" : "checked out";
+    console.log(`${book.title} by ${book.author} (${book.year}) - ${status}`);
+    
+    //Count how many books are available
+    if (book.available) {
+        availableCount++;
+    }
+    
+    // Count how many books were published before 2000
+    if (book.year < 2000) {
+        before2000Count++;
+    }
+    
+    // Find the newest book
+    if (book.year > newestBook.year) {
+        newestBook = book;
+    }
+}
+
+// Print final summary stats
+console.log(`Available books: ${availableCount}`);
+console.log(`Published before 2000: ${before2000Count}`);
+console.log(`Newest book: ${newestBook.title} (${newestBook.year})`);
