@@ -19,3 +19,15 @@ const menu = [
 ];
 
 // your code here
+
+const counts = { food: 0, drink: 0, dessert: 0 };
+
+for (let i = 0; i < menu.length; i++) {
+    const item = menu[i];
+    // use bracket access to increment the specific category counter
+    counts[item.category]++;
+}
+
+console.log(`food: ${counts.food}`);
+console.log(`drink: ${counts.drink}`);
+console.log(`dessert: ${counts.dessert}`);
