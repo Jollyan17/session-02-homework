@@ -13,3 +13,15 @@
 //   43°C: Stay inside, it's very hot!
 
 // your code here
+
+let temperature = 43;
+
+if (temperature >= 40) {
+    console.log(`${temperature}°C: Stay inside, it's very hot!`);
+} else if (temperature >= 30) {
+    console.log(`${temperature}°C: Hot, drink lots of water.`);
+} else if (temperature >= 20) {
+    console.log(`${temperature}°C: Nice weather, go outside.`);
+} else {
+    console.log(`${temperature}°C: Cool, take a jacket.`);
+}
