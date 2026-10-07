@@ -12,3 +12,19 @@
 //   Color: white
 
 // your code here
+
+
+const car = {
+    brand: "Toyota",
+    model: "Land Cruiser",
+    year: 2020,
+    mileage: 85000
+};
+
+console.log(`${car.brand} ${car.model} (${car.year}), ${car.mileage} km`);
+
+car.mileage += 1000;
+    console.log(`After the trip to Salalah: ${car.mileage} km`);
+
+car.color = "white";
+console.log(`Color: ${car.color}`);
